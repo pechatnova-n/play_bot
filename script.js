@@ -11,7 +11,7 @@ const isNumber = function (num) {
 
 const bot = function (number) {
     sayNumber = prompt("Угадай число от 1 до 100");
-    count = 3;
+    count = 10;
 
     const guess = function () {
         if (sayNumber == number) {
