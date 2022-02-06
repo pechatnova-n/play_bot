@@ -22,8 +22,6 @@ const bot = function (number) {
             } else {
                 return false;
             }
-
-
         } else if (sayNumber > number) {
             if(count <= 1) {
                 alert('Игра окончена');
@@ -31,7 +29,6 @@ const bot = function (number) {
                 sayNumber = prompt(`Загаданное число меньше, осталось попыток ${count = --count}`);
                 guess();
             }
-
         } else if (sayNumber > 0 && sayNumber < number) {
             if(count <= 1) {
                 alert('Игра окончена');
@@ -39,13 +36,15 @@ const bot = function (number) {
                 sayNumber = prompt(`Загаданное число больше, осталось попыток ${count = --count}`);
                 guess();
             }
-
         } else if(sayNumber === null) {
             alert('Игра окончена');
-        } else if(isNumber(sayNumber) == false) {
+        } else if(isNumber(sayNumber) == false || sayNumber == 0) {
+            console.log(count)
             sayNumber = prompt("Введи число!");
             sayNumber = +sayNumber;
             guess();
+        } else {
+
         }
     }
     guess();
